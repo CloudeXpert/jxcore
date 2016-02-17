@@ -1,9 +1,9 @@
 // Copyright & License details are available under JXCORE_LICENSE file
 
-// if (process.env.CITEST) {
-//     console.error('Skipping test due to CITEST environment variable. (old openssl.exe)');
-//     process.exit(0);
-// }
+if (process.env.CITEST) {
+    console.error('Skipping test due to CITEST environment variable. (old openssl.exe)');
+    process.exit(0);
+}
 if (!process.versions.openssl) {
     console.error("Skipping because node compiled without OpenSSL.");
     process.exit(0);
